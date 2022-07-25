@@ -6,7 +6,8 @@
   /* colors */
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
-  --clr-white: 0 0% 100%;
+  --clr-white: 0, 0%, 100%;
+  --clr-nav: 201, 79%, 46%;
   
   /* font sizes */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
@@ -21,7 +22,7 @@
   /* font families */
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-seriff;
-  --ff-sans-normal: "Barlow", sans-serif;
+  --ff-ubuntu-normal: 'Ubuntu', sans-serif;
   
 }
 
@@ -50,7 +51,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 /* set up the body */
 body {
-  font-family: var(--ff-sans-normal);
+  font-family: var(--ff-ubuntu-normal);
   font-size: var(--fs-400);
   line-height: 1.5;
   min-height: 100vh; 
@@ -92,4 +93,42 @@ input, button, textarea, select {
 .grid-container {
   display: grid;
   gap: var(--gap, 1rem);
+}
+
+/* --------------------------- */
+/* My CSS                      */
+/* --------------------------- */
+
+body {
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 300px 300px 300px 300px;
+  grid-template-areas: 
+  "left top top top"
+  "left mid mid rgt"
+  "left mid mid rgt"
+  "left mid mid rgt";
+}
+
+.top-bar{
+  grid-area: top;
+}
+
+.nav-bar {
+  background: hsl(var(--clr-nav));
+  color: hsl(var(--clr-white));
+  grid-area: left;
+}
+
+.nav-bar-list {
+  list-style: none;
+  flex-direction: column;
+  padding: 0;
+}
+
+.projects {
+  grid-area: mid;
+}
+
+.right {
+  grid-area: rgt;
 }

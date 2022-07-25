@@ -5,9 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="grid-container">
     <div class="top-bar grid-container">
       <textarea
         name="search-bar"
@@ -21,21 +26,23 @@
       <button>Upload</button>
       <button>Share</button>
     </div>
-    <nav class="nav-bar flex">
-      <h2>Dashboard</h2>
-      <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Messages</li>
-        <li>History</li>
-        <li>Tasks</li>
-        <li>Communities</li>
-        <li>Blank</li>
-        <li>Settings</li>
-        <li>Support</li>
-        <li>Privacy</li>
-      </ul>
-    </nav>
+    <div class="left">
+      <nav class="nav-bar">
+        <h2>Dashboard</h2>
+        <ul class="flex-container nav-bar-list">
+          <li>Home</li>
+          <li>Profile</li>
+          <li>Messages</li>
+          <li>History</li>
+          <li>Tasks</li>
+          <li>Communities</li>
+          <li>Blank</li>
+          <li>Settings</li>
+          <li>Support</li>
+          <li>Privacy</li>
+        </ul>
+      </nav>
+    </div>
     <section class="projects">
       <h2>Your Projects</h2>
       <ul class="grid-container">
@@ -47,53 +54,55 @@
         <li>Money Maker</li>
       </ul>
     </section>
-    <section class="announcements grid-container">
-      <h2>Announcements</h2>
-      <div class="grid-element">
-        <h3>Site Maintenance</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
-          minus animi non quod repellendus impedit, repudiandae eaque aliquam
-          sed consequuntur!
-        </p>
-      </div>
-      <div class="grid-element">
-        <h3>Community Share Day</h3>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
-          itaque vero et ut voluptatum laborum nostrum molestiae incidunt eum?
-          Culpa!
-        </p>
-      </div>
-      <div class="grid-element">
-        <h3>Updated Privacy Policy</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut expedita
-          repellendus consequuntur voluptas ea alias quae eius voluptatibus
-          architecto voluptates?
-        </p>
-      </div>
-    </section>
-    <section class="trending">
-      <h2>Trending</h2>
-      <div class="grid-container">
+    <div class="right">
+      <section class="announcements grid-container">
+        <h2>Announcements</h2>
         <div class="grid-element">
-          <h4>@tegan</h4>
-          <p>World Peace Builder</p>
+          <h3>Site Maintenance</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis
+            minus animi non quod repellendus impedit, repudiandae eaque aliquam
+            sed consequuntur!
+          </p>
         </div>
         <div class="grid-element">
-          <h4>@morgan</h4>
-          <p>Super Cool Project</p>
+          <h3>Community Share Day</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
+            itaque vero et ut voluptatum laborum nostrum molestiae incidunt eum?
+            Culpa!
+          </p>
         </div>
         <div class="grid-element">
-          <h4>@kendall</h4>
-          <p>Life Changing App</p>
+          <h3>Updated Privacy Policy</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut expedita
+            repellendus consequuntur voluptas ea alias quae eius voluptatibus
+            architecto voluptates?
+          </p>
         </div>
-        <div class="grid-element">
-          <h4>@alex</h4>
-          <p>No Trafiic Maker</p>
+      </section>
+      <section class="trending">
+        <h2>Trending</h2>
+        <div class="grid-container">
+          <div class="grid-element">
+            <h4>@tegan</h4>
+            <p>World Peace Builder</p>
+          </div>
+          <div class="grid-element">
+            <h4>@morgan</h4>
+            <p>Super Cool Project</p>
+          </div>
+          <div class="grid-element">
+            <h4>@kendall</h4>
+            <p>Life Changing App</p>
+          </div>
+          <div class="grid-element">
+            <h4>@alex</h4>
+            <p>No Trafiic Maker</p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </body>
 </html>
