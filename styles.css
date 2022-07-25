@@ -100,8 +100,8 @@ input, button, textarea, select {
 /* --------------------------- */
 
 body {
-  grid-template-columns: 200px 200px 200px 200px;
-  grid-template-rows: 300px 300px 300px 300px;
+  grid-template-columns: 25vw 25vw 25vw 25vw;
+  grid-template-rows: 25vh 25vh 25vh 25vh;
   grid-template-areas: 
   "left top top top"
   "left mid mid rgt"
@@ -117,6 +117,8 @@ body {
   background: hsl(var(--clr-nav));
   color: hsl(var(--clr-white));
   grid-area: left;
+  height: 100vh;
+  padding: 1rem;
 }
 
 .nav-bar-list {
