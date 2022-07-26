@@ -11,8 +11,8 @@
   
   /* font sizes */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
-  --fs-800: 3.5rem;
-  --fs-700: 1.5rem;
+  --fs-800: 3rem;
+  --fs-700: 1.25rem;
   --fs-600: 1rem;
   --fs-500: 1.75rem;
   --fs-400: 0.9375rem;
@@ -98,6 +98,10 @@ input, button, textarea, select {
   gap: 1rem;
 }
 
+.bigger-icon  span{
+  font-size: var(--fs-800);
+}
+
 /* --------------------------- */
 /* My CSS                      */
 /* --------------------------- */
@@ -119,12 +123,12 @@ body {
   'search search search notifications' 
   'hello hello buttons buttons';  
   box-shadow: 0px 7px 15px -5px rgba(66, 68, 90, 1);
+  padding-bottom: 1rem;
 }
 
 .search-bar {
   grid-area: search;
   background-color: hsl(214, 32%, 91%);
-  width: 100%;
 }
 
 .notifications {
@@ -146,12 +150,36 @@ body {
 .nav-bar {
   background: hsl(var(--clr-nav));
   color: hsl(var(--clr-white));
+  font-size: var(--fs-700);
+  font-weight: bold;
+  padding: 1rem;
   height: 100%;
 }
+
 
 .nav-bar-list {
   list-style: none;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.space {
+  visibility: hidden;
+}
+
+.icon-dashboard {
+  gap: .5rem;
+  flex-direction: row;
+}
+
+.icon-dashboard a {
+  color: hsl(var(--clr-white));
+  text-decoration: none;
+}
+
+.icon-dashboard a:hover,
+.icon-dashboard a:focus {
+  border-bottom:rgb(93, 105, 230) solid;
 }
 
 .projects {
@@ -172,3 +200,4 @@ body {
 .right {
   grid-area: right;
 }
+
