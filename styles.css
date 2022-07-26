@@ -39,7 +39,7 @@
   box-sizing: border-box;
 }
 
-/* Reset margins */
+/* Reset margins and list padding */
 
 body, h1, h2, h3, h4, h5, p, figure, picture {
   margin: 0;
@@ -47,6 +47,10 @@ body, h1, h2, h3, h4, h5, p, figure, picture {
 
 h1, h2, h3, h4, h5, h6, p {
   font-weight: 400;
+}
+
+ul, ol {
+  padding: 0;
 }
 
 /* set up the body */
@@ -87,12 +91,11 @@ input, button, textarea, select {
 
 .flex-container {
   display: flex;
-  gap: var(--gap, 1rem);
 }
 
 .grid-container {
   display: grid;
-  gap: var(--gap, 1rem);
+  gap: 1rem;
 }
 
 /* --------------------------- */
@@ -100,37 +103,72 @@ input, button, textarea, select {
 /* --------------------------- */
 
 body {
-  grid-template-columns: 25vw 25vw 25vw 25vw;
-  grid-template-rows: 25vh 25vh 25vh 25vh;
-  grid-template-areas: 
-  "left top top top"
-  "left mid mid rgt"
-  "left mid mid rgt"
-  "left mid mid rgt";
+  background-color: hsl(214, 32%, 91%);
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+  'left top top top'
+  'left projects projects right';
 }
 
 .top-bar{
+  background-color: hsl(0, 0%, 100%);
   grid-area: top;
+  grid-auto-columns: 1fr;
+  align-items: end;
+  grid-template-areas: 
+  'search search search notifications' 
+  'hello hello buttons buttons';  
+  box-shadow: 0px 7px 15px -5px rgba(66, 68, 90, 1);
+}
+
+.search-bar {
+  grid-area: search;
+  background-color: hsl(214, 32%, 91%);
+  width: 100%;
+}
+
+.notifications {
+  grid-area: notifications;
+}
+
+.hello {
+  grid-area: hello;
+}
+
+.buttons {
+  grid-area: buttons;
+}
+
+.left {
+  grid-area: left;
 }
 
 .nav-bar {
   background: hsl(var(--clr-nav));
   color: hsl(var(--clr-white));
-  grid-area: left;
-  height: 100vh;
-  padding: 1rem;
+  height: 100%;
 }
 
 .nav-bar-list {
   list-style: none;
   flex-direction: column;
-  padding: 0;
 }
 
 .projects {
-  grid-area: mid;
+  grid-area: projects;
+}
+
+.projects-grid-container {
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.grid-element {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 7px 15px -5px rgba(66, 68, 90, 1);
 }
 
 .right {
-  grid-area: rgt;
+  grid-area: right;
 }
